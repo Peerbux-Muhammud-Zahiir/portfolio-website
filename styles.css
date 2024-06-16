@@ -1,0 +1,99 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f9; /* Light blue background */
+    color: #333; /* Dark text color */
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #ff8c42; /* Orange heading color */
+  }
+  
+  p {
+    font-size: 1.1em;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    color: #2a9d8f; /* Blue heading color */
+    margin-bottom: 10px;
+  }
+  
+  .project {
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Simple animation */
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+  }
+  
+  a {
+    color: #2a9d8f; /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s; /* Transition effect for color change */
+  }
+  
+  a:hover {
+    color: #ff8c42; /* Change color on hover */
+    text-decoration: underline;
+  }
+  
+  /* Typewriter effect */
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* Cursor effect */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+  /* Responsive design */
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  }
+  
