@@ -6,37 +6,73 @@
   <title>My Portfolio</title>
   <link href="styles.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon/linux_226772.png">
-  <title>My Portfolio</title>
+  <style>
+    .container {
+      position: relative;
+    }
+    .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Welcome to My Portfolio</h1>
-      <p>I am a CS student @UoM</p>
-    </header>
-    <section>
-      <h2>About Me</h2>
-      <p>Hello there! I'm Zahiir Peerbux, a dedicated Computer Science student embarking on an exciting journey at the University of Mauritius. My passion for the intricate world of cybersecurity fuels my days, as I eagerly explore the digital frontier where technology meets security. Beyond the complexities of coding and algorithms, I find joy in deciphering the mechanisms that safeguard our digital landscapes. Join me as I navigate through the realms of bytes and encryption, striving to make the digital world a safer place, one line of code at a time.</p>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>Description</p>
-      </div>
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>Description</p>
-      </div>
-    </section>
-    <section>
-      <h2>Contact Me</h2>
-      <p>You can reach me at <a href="mailto:peerbuxmuhammudzahiir@gmail.com" type="email" target="_blank">peerbuxmuhammudzahiir@gmail.com</a></p>
-      <p>Connect with me on <a href="https://www.linkedin.com/in/peerbux-muhammud-zahiir-221621310?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7hVTqlZbSAijP%2FXEnA7V0w%3D%3D" target="_blank">LinkedIn</a></p>
-      <!--<p>Follow me on <a href="link to twitter">Twitter</a></p>-->
-      <p>Check out my blog at <a href="https://www.blogger.com/profile/07510968635379733077" target="_blank">Blogger</a></p>
-      <p>View my projects on <a href="https://github.com/Peerbux-Muhammud-Zahiir" target="_blank">GitHub</a></p> 
-    </section>
+    <div class="video-background">
+      <video autoplay muted loop id="myVideo">
+        <source src="videos/213616_tiny.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="content">
+      <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Computer Science student at the University of Mauritius</p>
+      </header>
+      <section>
+        <h2>About Me</h2>
+        <p>Hello! I'm Zahiir Peerbux, a Computer Science student at the University of Mauritius passionate about cybersecurity. Join me in exploring how technology and security converge to safeguard our digital world.</p>
+        
+        
+
+
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Game-of-code-CTF</h3>
+          <p>Curtin Mauritius hosted a hackathon.</p>
+          <p>For more details, visit our <a href="https://github.com/JoottunAtish/Game-of-code-CTF" target="_blank">GitHub project page.</a></p>
+          <p>To see images from our hackathon experience, <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">click here.</a></p>
+        </div>
+      </section>
+      <section>
+
+
+        <h2>Contact me</h2>
+      <button class="button-64" role="button"><span class="text"><a href="mailto:peerbuxmuhammudzahiir@gmail.com" type="email" target="_blank">Email</a></span></button>
+      <button class="button-64" role="button"><span class="text"><a href="https://www.linkedin.com/in/peerbux-muhammud-zahiir-221621310?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7hVTqlZbSAijP%2FXEnA7V0w%3D%3D" target="_blank">LinkedIn</a></span></button>
+      <button class="button-64" role="button"><span class="text"><a href="https://www.blogger.com/profile/07510968635379733077" target="_blank">Blogger</a></span></button>
+      <button class="button-64" role="button"><span class="text"><a href="https://github.com/Peerbux-Muhammud-Zahiir" target="_blank">GitHub</a></span></button>
+      
+
+
+
+      </section>
+    </div>
     <footer>
       <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
     </footer>
