@@ -1,111 +1,112 @@
 /* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f5f9; /* Light blue background */
-    color: #333; /* Dark text color */
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #E0E0E0; /* Light grey text color */
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #FFFFFF; /* White heading color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+h3 {
+  color: #FFD700; /* Bright yellow color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+p {
+  font-size: 1.1em;
+  color: #E0E0E0; /* Light grey text color for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #FFD700; /* Bright yellow heading color */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.project {
+  margin-bottom: 15px;
+  transition: transform 0.3s; /* Simple animation */
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+a {
+  color: #00FFFF; /* Bright cyan link color */
+  text-decoration: none;
+  transition: color 0.3s; /* Transition effect for color change */
+}
+
+a:hover {
+  color: #FFD700; /* Change color on hover */
+  text-decoration: underline;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #FFD700; /* Cursor effect */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FFD700; }
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
   h1 {
-    font-size: 2.5em;
-    color:#AF40FF; /* Orange heading color */
+    font-size: 2em;
   }
-  
-  h3{
-    color:cyan
+
+  h2 {
+    font-size: 1.5em;
   }
 
   p {
-    font-size: 1.1em;
-    color:#00DDEB;
+    font-size: 1em;
   }
-  
-  section {
-    margin-bottom: 30px;
-  }
-  
-  h2 {
-    font-size: 1.8em;
-    color: #AF40FF; /* Blue heading color */
-    margin-bottom: 10px;
-  }
-  
-  .project {
-    margin-bottom: 15px;
-    transition: transform 0.3s; /* Simple animation */
-  }
-  
-  .project:hover {
-    transform: scale(1.05);
-  }
-  
-  a {
-    color: #AF40FF; /* Blue link color */
-    text-decoration: none;
-    transition: color 0.3s; /* Transition effect for color change */
-  }
-  
-  a:hover {
-    color: #5B42F3; /* Change color on hover */
-    text-decoration: underline;
-  }
-  
-  /* Typewriter effect */
-  .typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* Cursor effect */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
-  
-  /* Responsive design */
-  @media only screen and (max-width: 600px) {
-    h1 {
-      font-size: 2em;
-    }
-  
-    h2 {
-      font-size: 1.5em;
-    }
-  
-    p {
-      font-size: 1em;
-    }
-  }
-  
+}
 
-
-
-  /* CSS */
+/* CSS */
 .button-64 {
   align-items: center;
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -128,11 +129,15 @@
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+  margin: 10px; /* Added margin for spacing */
+  transition: background-color 0.3s, transform 0.3s; /* Added transition for hover and click effects */
 }
 
 .button-64:active,
 .button-64:hover {
   outline: 0;
+  background-color: #5B42F3; /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
 }
 
 .button-64 span {
@@ -148,10 +153,6 @@
   background: none;
 }
 
-
-
-
-
 @media (min-width: 768px) {
   .button-64 {
     font-size: 24px;
@@ -159,22 +160,20 @@
   }
 }
 
-
-
-
-  /* Style the video: 100% width and height to cover the entire window */
+/* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  background: url('path/to/fallback-image.jpg') no-repeat center center; /* Fallback image */
+  background-size: cover; /* Ensure the fallback image covers the entire area */
 }
 
 /* Add some content at the bottom of the video/page */
 .content {
-  position: fixed;
-  bottom: 0;
+  position: relative; /* Changed to relative for scrolling content */
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
@@ -196,4 +195,3 @@
   background: #ddd;
   color: black;
 }
-
