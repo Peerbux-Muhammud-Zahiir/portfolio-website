@@ -1,9 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const texts = [
-      "Welcome to My Portfolio",
-      "Computer Science student",
-      "Aspiring Software Developer",
-      "Passionate about Technology"
+      "C++",
+      "Python",
+      "HTML",
+      "CSS",
+        "JavaScript",
+        "SQL Server",
+        "Prolog",
+        "Racket",
+        "C",
+        "C#"
     ];
     
     let currentTextIndex = 0;
