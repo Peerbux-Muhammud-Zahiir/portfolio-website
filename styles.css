@@ -25,18 +25,18 @@ header {
 
 h1 {
   font-size: 2.5em;
-  color: #FFFFFF; /* White heading color */
+  color: purple; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
 h3 {
-  color: #FFD700; /* Bright yellow color */
+  color: cyan;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
 p {
   font-size: 1.1em;
-  color: #E0E0E0; /* Light grey text color for better readability */
+  color: cyan; /* Light grey text color for better readability */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
@@ -46,7 +46,7 @@ section {
 
 h2 {
   font-size: 1.8em;
-  color: #FFD700; /* Bright yellow heading color */
+  color: purple; /* Bright yellow heading color */
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
