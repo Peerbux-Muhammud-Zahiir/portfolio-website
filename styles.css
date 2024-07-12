@@ -25,7 +25,7 @@ header {
 
 h1 {
   font-size: 2.5em;
-  color: purple; 
+  color: #7300ff; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
@@ -46,7 +46,7 @@ section {
 
 h2 {
   font-size: 1.8em;
-  color: purple; /* Bright yellow heading color */
+  color: #7300ff; 
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
