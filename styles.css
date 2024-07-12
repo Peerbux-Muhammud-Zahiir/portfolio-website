@@ -61,7 +61,7 @@ h2 {
 }
 
 a {
-  color: #00FFFF; /* Bright cyan link color */
+  color: #0008ff; 
   text-decoration: none;
   transition: color 0.3s; /* Transition effect for color change */
 }
@@ -78,7 +78,7 @@ a:hover {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  animation: typing 5s steps(40, end), blink-caret 1s step-end infinite;
 }
 
 @keyframes typing {
