@@ -1,42 +1,38 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const texts = [
-      "C++",
-      "Python",
-      "HTML",
-      "CSS",
-        "JavaScript",
-        "SQL Server",
-        "Prolog",
-        "Racket",
-        "C",
-        "C#"
-    ];
-    
-    let currentTextIndex = 0;
-    let currentCharIndex = 0;
-    const typewriterElement = document.querySelector('.typewriter');
-    
-    function type() {
-      if (currentCharIndex < texts[currentTextIndex].length) {
-        typewriterElement.textContent += texts[currentTextIndex].charAt(currentCharIndex);
-        currentCharIndex++;
-        setTimeout(type, 100); // Adjust typing speed here
-      } else {
-        setTimeout(erase, 2000); // Adjust delay before erasing here
+document.addEventListener("DOMContentLoaded", function() {
+  const typewriterText = ["AI and ML enthusiast", "Hackathon participant", "Aspiring developer"];
+  let i = 0;
+  let j = 0;
+  let currentText = "";
+  let isDeleting = false;
+  const speed = 150;
+
+  function type() {
+    if (i < typewriterText.length) {
+      if (!isDeleting && j <= typewriterText[i].length) {
+        currentText = typewriterText[i].substring(0, j++);
+      }
+      if (isDeleting && j <= typewriterText[i].length) {
+        currentText = typewriterText[i].substring(0, j--);
+      }
+
+      document.querySelector(".typewriter").innerHTML = currentText;
+
+      if (j == typewriterText[i].length) {
+        isDeleting = true;
+      }
+
+      if (isDeleting && j === 0) {
+        currentText = "";
+        isDeleting = false;
+        i++;
+      }
+
+      if (i === typewriterText.length) {
+        i = 0;
       }
     }
-    
-    function erase() {
-      if (currentCharIndex > 0) {
-        typewriterElement.textContent = texts[currentTextIndex].substring(0, currentCharIndex - 1);
-        currentCharIndex--;
-        setTimeout(erase, 50); // Adjust erasing speed here
-      } else {
-        currentTextIndex = (currentTextIndex + 1) % texts.length;
-        setTimeout(type, 500); // Adjust delay before typing next text here
-      }
-    }
-    
-    type();
-  });
-  
+    setTimeout(type, isDeleting ? speed / 2 : speed);
+  }
+
+  type();
+});

@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #121212; /* Dark background */
-  color: #E0E0E0; /* Light grey text color */
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
   line-height: 1.6;
 }
 
@@ -25,19 +25,18 @@ header {
 
 h1 {
   font-size: 2.5em;
-  color: #7300ff; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  color: #004c99; /* Dark blue */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
-  color: cyan;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  color: #0066cc; /* Medium blue */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 p {
   font-size: 1.1em;
-  color: cyan; /* Light grey text color for better readability */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  color: #333333; /* Dark gray */
 }
 
 section {
@@ -46,14 +45,14 @@ section {
 
 h2 {
   font-size: 1.8em;
-  color: #7300ff; 
+  color: #0066cc; /* Medium blue */
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .project {
   margin-bottom: 15px;
-  transition: transform 0.3s; /* Simple animation */
+  transition: transform 0.3s;
 }
 
 .project:hover {
@@ -61,62 +60,26 @@ h2 {
 }
 
 a {
-  color:#c315d6; 
+  color: #004c99; /* Dark blue */
   text-decoration: none;
-  transition: color 0.3s; /* Transition effect for color change */
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #FFD700; /* Change color on hover */
-  text-decoration: underline;
+  color: #6a6a6a; /* Orange */
+  text-decoration: none;
 }
 
-/* Typewriter effect */
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #FFD700; /* Cursor effect */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: typing 5s steps(40, end), blink-caret 1s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #FFD700; }
-}
-
-/* Responsive design */
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-}
-
-/* CSS */
 .button-64 {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #004c99, #ffffff 50%, #3700ff);
   border: 0;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #FFFFFF;
   display: flex;
-  font-family: Phantomsans, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 20px;
   justify-content: center;
   line-height: 1em;
@@ -129,15 +92,15 @@ a:hover {
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
-  margin: 10px; /* Added margin for spacing */
-  transition: background-color 0.3s, transform 0.3s; /* Added transition for hover and click effects */
+  margin: 10px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .button-64:active,
 .button-64:hover {
   outline: 0;
-  background-color: #5B42F3; /* Change background color on hover */
-  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  background-color: #5B42F3;
+  transform: scale(1.1);
 }
 
 .button-64 span {
@@ -160,38 +123,188 @@ a:hover {
   }
 }
 
-/* Style the video: 100% width and height to cover the entire window */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  background: url('path/to/fallback-image.jpg') no-repeat center center; /* Fallback image */
-  background-size: cover; /* Ensure the fallback image covers the entire area */
+  background: url('path/to/fallback-image.jpg') no-repeat center center;
+  background-size: cover;
 }
 
-/* Add some content at the bottom of the video/page */
 .content {
-  position: relative; /* Changed to relative for scrolling content */
+  position: relative;
   background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
+  color: #ffffff;
   padding: 20px;
+  text-align: center;
+  z-index: 2;
 }
 
-/* Style the button used to pause/play the video */
-#myBtn {
-  width: 200px;
-  font-size: 18px;
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio and fit within container */
+  overflow: hidden;
+  z-index: -1;
+  background: black; /* Fallback color */
+}
+
+footer {
+  text-align: center;
   padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
 }
 
-#myBtn:hover {
-  background: #ddd;
-  color: black;
+.typewriter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.css-typing {
+  text-align: center;
+}
+
+.css-typing p {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.css-typing p:nth-child(1) {
+  width: 7.3em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 11.5em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 7.3em;
+  opacity: 0;
+  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }

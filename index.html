@@ -1,97 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="script.js" type="text/javascript"></script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link href="styles.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon/penguin_11260278.png">
-  <style>
-    .container {
-      position: relative;
-    }
-    .video-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-    .video-background video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .content {
-      position: relative;
-      z-index: 1;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <div class="video-background">
       <video autoplay muted loop id="myVideo">
-        <source src="videos/213616_tiny.mp4" type="video/mp4">
+        <source src="/videos/12716-241674181.mp4" type="video/mp4">
       </video>
     </div>
     <div class="content">
       <header>
-        <h1>Welcome to My Portfolio</h1>
-        <h2 class="typewriter"></h2>
-        <p>Computer Science student at the University of Mauritius</p>
+        <!-- <h1>Welcome to My Portfolio</h1> -->
+        <!-- <div class="typewriter-container">
+          <h2 class="typewriter"></h2>
+        </div> -->
+        <div class="typewriter-container">
+          <div class="css-typing">
+            <p style="color:white;">Zahiir</p>
+            <p style="color:white;">CSY2 @ UoM</p>
+            <p style="color:cyan;">Scroll down</p>
+
+          </div>
+        </div>
+        
+        <!-- <p>Computer Science student at the University of Mauritius</p> -->
       </header>
       
       <section>
         <h2>About Me</h2>
-        <p>Hello! I'm Zahiir Peerbux, a Computer Science student at the University of Mauritius passionate about cybersecurity. Join me in exploring how technology and security converge to safeguard our digital world.</p>
-        
-        
-
-
+        <p style="color:rgb(223, 223, 223);">Hello! I'm Zahiir Peerbux, a Computer Science student at the University of Mauritius passionate about cybersecurity. Join me in exploring how technology and security converge to safeguard our digital world.</p>
       </section>
+
       <section>
         <h2>Projects</h2>
         <div class="project">
           <h3>Game-of-code-CTF</h3>
-          <p>Curtin Mauritius hosted a hackathon.</p>
-          <p>For more details, visit our <a href="https://github.com/JoottunAtish/Game-of-code-CTF" target="_blank">GitHub project page.</a></p>
-          <p>To see images from our hackathon experience, <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">click here.</a></p>
+          <p style="color:rgb(223, 223, 223);">Curtin Mauritius hosted a hackathon.</p>
+          <p style="color:rgb(223, 223, 223);">For more details, visit our <a href="https://github.com/JoottunAtish/Game-of-code-CTF" target="_blank">GitHub project page.</a></p>
+          <p style="color:rgb(223, 223, 223);">To see images from our hackathon experience, <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">click here.</a></p>
         </div>
 
-        <div class="project">
+        <!-- <div class="project">
           <h3>Bio-Tech-Hackathon</h3>
           <p>24-Hour Innovation Sprint.</p>
           <p>For more details, visit our <a href="https://github.com/Peerbux-Muhammud-Zahiir/NutriCare-Bio-Tech-Hackathon-" target="_blank">GitHub project page.</a></p>
-         
-        </div>
-    
-        <h2>Projects</h2>
-     
+        </div> -->
       </section>
 
       <section>
-
-
-        <h2>Contact me</h2>
-      <button class="button-64" role="button"><span class="text"><a href="mailto:peerbuxmuhammudzahiir@gmail.com" type="email" target="_blank">Email</a></span></button>
-      <button class="button-64" role="button"><span class="text"><a href="https://github.com/Peerbux-Muhammud-Zahiir" target="_blank">GitHub</a></span></button>
-      <button class="button-64" role="button"><span class="text"><a href="https://www.linkedin.com/in/zahiir-peerbux-221621310?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_appails%3B7hVTqlZbSAijP%2FXEnA7V0w%3D%3D" target="_blank">LinkedIn</a></span></button>
-      <button class="button-64" role="button"><span class="text"><a href="https://www.blogger.com/profile/07510968635379733077" target="_blank">Blogger</a></span></button>
-      
-      
-
-
-
+        <h2>Contact Me</h2>
+        <div class="button-container">
+          <button class="button-64" role="button"><span class="text"><a href="mailto:peerbuxmuhammudzahiir@gmail.com" target="_blank">Email</a></span></button>
+          <button class="button-64" role="button"><span class="text"><a href="https://github.com/Peerbux-Muhammud-Zahiir" target="_blank">GitHub</a></span></button>
+          <button class="button-64" role="button"><span class="text"><a href="https://www.linkedin.com/in/zahiir-peerbux-221621310" target="_blank">LinkedIn</a></span></button>
+          <button class="button-64" role="button"><span class="text"><a href="https://www.blogger.com/profile/07510968635379733077" target="_blank">Blogger</a></span></button>
+        </div>
       </section>
     </div>
     <footer>
-      <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+      <p style="color:rgb(223, 223, 223)">&copy; 2024 My Portfolio. All Rights Reserved.</p>
     </footer>
   </div>
+  <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
