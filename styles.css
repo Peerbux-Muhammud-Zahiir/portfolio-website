@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: black;
   color: #333;
   line-height: 1.6;
 }
@@ -56,7 +56,7 @@ h2 {
 }
 
 .project:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 a {
@@ -72,7 +72,7 @@ a:hover {
 
 .button-64 {
   align-items: center;
-  background-image: linear-gradient(144deg, #004c99, #ffffff 50%, #3700ff);
+  background-image: linear-gradient(144deg, cyan, #ffffff 50%, grey);
   border: 0;
   border-radius: 10px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -99,7 +99,7 @@ a:hover {
 .button-64:active,
 .button-64:hover {
   outline: 0;
-  background-color: #5B42F3;
+  background-color: black;
   transform: scale(1.1);
 }
 
@@ -129,7 +129,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-#myVideo {
+/* #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -137,7 +137,7 @@ a:hover {
   min-height: 100%;
   background: url('path/to/fallback-image.jpg') no-repeat center center;
   background-size: cover;
-}
+} */
 
 .content {
   position: relative;
@@ -148,17 +148,17 @@ a:hover {
   z-index: 2;
 }
 
-.video-background {
+/* .video-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain; /* Maintain aspect ratio and fit within container */
-  overflow: hidden;
+  /* overflow: hidden;
   z-index: -1;
-  background: black; /* Fallback color */
-}
+  background: black;} /* Fallback color */
+
 
 footer {
   text-align: center;
@@ -307,4 +307,17 @@ footer {
   50% {
     border-color: transparent;
   }
+}
+
+
+
+
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place the canvas behind other elements */
+  pointer-events: none; /* Ensure the canvas does not capture mouse events */
 }
