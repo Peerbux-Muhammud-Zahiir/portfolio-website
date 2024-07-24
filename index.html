@@ -33,10 +33,7 @@
       
       <section>
         <h2>About Me</h2>
-        <p style="color:rgb(223, 223, 223);">Hello! I'm Zahiir Peerbux, a Computer Science student at the University of Mauritius 
-          passionate about artificial intelligence and machine learning. 
-          Join me in exploring how technology and intelligence converge 
-          to innovate and transform our digital world.</p>
+        <p style="color:rgb(223, 223, 223);">Hello! I'm Zahiir Peerbux, a Computer Science student at the University of Mauritius. I'm passionate about artificial intelligence and machine learning. Let's explore how technology can innovate and transform our world together.</p>
       </section>
 
       <section>
@@ -45,7 +42,7 @@
           <h3>Game-of-code-CTF</h3>
           <p style="color:rgb(223, 223, 223);">Curtin Mauritius hosted a hackathon.</p>
           <p style="color:rgb(223, 223, 223);">For more details, visit our <a href="https://github.com/JoottunAtish/Game-of-code-CTF" target="_blank">GitHub project page.</a></p>
-          <p style="color:rgb(223, 223, 223);">To see images from our hackathon experience, <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">click here.</a></p>
+          <p style="color:rgb(223, 223, 223);">See images from our hackathon experience <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">here.</a></p>
         </div>
 
        <div class="project">
@@ -71,31 +68,27 @@
   </div>
 
   <script>
-    let followers = [];
-    let numFollowers = 10;
-    let easing = 0.2;
+    let circleX, circleY; // Variables to store circle's position
+    const easing = 0.05; // Easing factor to make the movement smoother and slower
 
     function setup() {
       createCanvas(windowWidth, windowHeight);
-      for (let i = 0; i < numFollowers; i++) {
-        followers.push(createVector(width / 2, height / 2));
-      }
       noStroke();
+      circleX = width / 2;
+      circleY = height / 2;
     }
 
     function draw() {
-      background(0, 0, 0, 0);
-      let target = createVector(mouseX, mouseY);
+      clear();
+      let targetX = mouseX;
+      let targetY = mouseY;
 
-      for (let i = followers.length - 1; i > 0; i--) {
-        followers[i] = p5.Vector.lerp(followers[i], followers[i - 1], easing);
-      }
-      followers[0] = p5.Vector.lerp(followers[0], target, easing);
+      // Easing towards the target position
+      circleX += (targetX - circleX) * easing;
+      circleY += (targetY - circleY) * easing;
 
-      for (let i = 0; i < followers.length; i++) {
-        fill(0, 255, 255, 255 * (i + 1) / followers.length);
-        ellipse(followers[i].x, followers[i].y, 20, 20);
-      }
+      fill(150, 150, 150, 100); // Grey color with slight transparency
+      ellipse(circleX, circleY, 50, 50); // Draw the circle
     }
 
     function windowResized() {
