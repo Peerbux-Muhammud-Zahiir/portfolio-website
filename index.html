@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link href="styles.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="favicon/person.png">
+  <link rel="icon" type="image/x-icon" href="favicon/man_4140048.png">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <style>
     canvas {
@@ -24,32 +24,37 @@
       <header>
         <div class="typewriter-container">
           <div class="css-typing">
-            <p style="color:white;">Zahiir</p>
-            <p style="color:white;">CSY2 @ UoM</p>
-            <p style="color:cyan;">Scroll down</p>
+            <p style="color:#4169e1;">Zahiir</p>
+            <!-- #ff9800; orange #4169e1; blue -->
+            <p style="color:#4169e1;">CSY2 @ UoM</p>
+            <p style="color:#ff9800;">Scroll down</p>
           </div>
         </div>
       </header>
       
       <section>
         <h2>About Me</h2>
-        <p style="color:rgb(223, 223, 223);">Hello! I'm Zahiir Peerbux, a Computer Science student at the University of Mauritius. I'm passionate about artificial intelligence and machine learning. Let's explore how technology can innovate and transform our world together.</p>
+        <p>Hello! I'm Zahiir Peerbux, a Computer Science student at the University of Mauritius. I'm passionate about artificial intelligence and machine learning. Let's explore how technology can innovate and transform our world together.</p>
       </section>
 
       <section>
         <h2>Projects</h2>
+
+
+        <div class="project">
+          <h3>Bio-Tech-Hackathon</h3>
+          <p>24-Hour Innovation Sprint.</p>
+          <p>For more details, visit our <a href="https://github.com/Peerbux-Muhammud-Zahiir/NutriCare_app" target="_blank">GitHub project page.</a></p>
+        </div>
+        
         <div class="project">
           <h3>Game-of-code-CTF</h3>
-          <p style="color:rgb(223, 223, 223);">Curtin Mauritius hosted a hackathon.</p>
-          <p style="color:rgb(223, 223, 223);">For more details, visit our <a href="https://github.com/JoottunAtish/Game-of-code-CTF" target="_blank">GitHub project page.</a></p>
-          <p style="color:rgb(223, 223, 223);">See images from our hackathon experience <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">here.</a></p>
+          <p>Curtin Mauritius hosted a hackathon.</p>
+          <p>For more details, visit our <a href="https://github.com/JoottunAtish/Game-of-code-CTF" target="_blank">GitHub project page.</a></p>
+          <p>See images from our hackathon experience <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">here.</a></p>
         </div>
 
-       <div class="project">
-          <h3>Bio-Tech-Hackathon</h3>
-          <p style="color:white;">24-Hour Innovation Sprint.</p>
-          <p style="color:white;">For more details, visit our <a href="https://github.com/Peerbux-Muhammud-Zahiir/NutriCare_app" target="_blank">GitHub project page.</a></p>
-        </div>
+       
       </section>
 
       <section>
@@ -63,7 +68,7 @@
       </section>
     </div>
     <footer>
-      <p style="color:rgb(223, 223, 223)">&copy; 2024 My Portfolio. All Rights Reserved.</p>
+      <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
     </footer>
   </div>
 
@@ -87,7 +92,8 @@
       circleX += (targetX - circleX) * easing;
       circleY += (targetY - circleY) * easing;
 
-      fill(150, 150, 150, 100); // Grey color with slight transparency
+      fill(255, 255, 255, 200);  // The last value is the alpha, set to 200 for some transparency
+      // Grey color with slight transparency
       ellipse(circleX, circleY, 50, 50); // Draw the circle
     }
 
