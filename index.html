@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link href="styles.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="favicon/man_4140048.png">
+  <link rel="icon" type="image/x-icon" href="favicon/icons8-person-64.png">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <style>
     canvas {
@@ -24,10 +24,10 @@
       <header>
         <div class="typewriter-container">
           <div class="css-typing">
-            <p style="color:#4169e1;">Zahiir</p>
+            <p style="color:white;">Zahiir</p>
             <!-- #ff9800; orange #4169e1; blue -->
-            <p style="color:#4169e1;">CSY2 @ UoM</p>
-            <p style="color:#ff9800;">Scroll down</p>
+            <p style="color:white;">CSY2 @ UoM</p>
+            <p style="color:green;"><b>Scroll down</b></p>
           </div>
         </div>
       </header>
@@ -39,13 +39,10 @@
 
       <section>
         <h2>Projects</h2>
-
-
         <div class="project">
           <h3>Bio-Tech-Hackathon</h3>
           <p>24-Hour Innovation Sprint.</p>
           <p>For more details, visit our <a href="https://github.com/Peerbux-Muhammud-Zahiir/NutriCare_app" target="_blank">GitHub project page.</a></p>
-
         </div>
         
         <div class="project">
@@ -54,8 +51,6 @@
           <p>For more details, visit our <a href="https://github.com/JoottunAtish/Game-of-code-CTF" target="_blank">GitHub project page.</a></p>
           <p>See images from our hackathon experience <a href="https://drive.google.com/drive/folders/1ouvE1ZtAVX81vpPRs7Yjs-tx2YbOVlob" target="_blank">here.</a></p>
         </div>
-
-       
       </section>
 
       <section>
@@ -74,28 +69,112 @@
   </div>
 
   <script>
-    let circleX, circleY; // Variables to store circle's position
-    const easing = 0.05; // Easing factor to make the movement smoother and slower
+    let angle;
 
     function setup() {
       createCanvas(windowWidth, windowHeight);
-      noStroke();
-      circleX = width / 2;
-      circleY = height / 2;
+      colorMode(HSB);
+      angleMode(DEGREES);
     }
 
     function draw() {
       clear();
-      let targetX = mouseX;
-      let targetY = mouseY;
+      background(0, 0, 0, 0); // Transparent background
 
-      // Easing towards the target position
-      circleX += (targetX - circleX) * easing;
-      circleY += (targetY - circleY) * easing;
+      // Eye-following cursor animation
+      drawEyes();
 
-      fill(255, 255, 255, 200);  // The last value is the alpha, set to 200 for some transparency
-      // Grey color with slight transparency
-      ellipse(circleX, circleY, 50, 50); // Draw the circle
+      // Tree animation
+      drawTree();
+    }
+
+    function drawEyes() {
+      // Draw left eye
+      let leftX = width / 2 - 50;
+      let leftY = height / 2;
+
+      let leftAngle = atan2(mouseY - leftY, mouseX - leftX);
+
+      push();
+      translate(leftX, leftY);
+      fill(255);
+      ellipse(0, 0, 50, 50);
+      rotate(leftAngle);
+      fill(0);
+      ellipse(12.5, 0, 25, 25);
+      pop();
+
+      // Draw right eye
+      let rightX = width / 2 + 50;
+      let rightY = height / 2;
+
+      let rightAngle = atan2(mouseY - rightY, mouseX - rightX);
+
+      push();
+      translate(rightX, rightY);
+      fill(255);
+      ellipse(0, 0, 50, 50);
+      rotate(rightAngle);
+      fill(0);
+      ellipse(12.5, 0, 25, 25);
+      pop();
+    }
+
+    function drawTree() {
+      // Calculate the angle based on the mouse position, maximum 90 degrees
+      angle = (mouseX / width) * 90;
+      angle = min(angle, 90);
+
+      // Start the tree from the bottom of the screen
+      translate(width / 2, height);
+
+      // Draw a line 120 pixels
+      stroke(0, 255, 255);
+      line(0, 0, 0, -120);
+
+      // Move to the end of that line
+      translate(0, -120);
+
+      // Start the recursive branching
+      branch(120, 0);
+    }
+
+    function branch(h, level) {
+      // Set the hue based on the recursion level
+      stroke(level * 25, 255, 255);
+
+      // Each branch will be 2/3 the size of the previous one
+      h *= 0.66;
+
+      // Draw if our branch length > 2, otherwise stop the recursion
+      if (h > 2) {
+        // Draw the right branch
+        // Save the current coordinate system
+        push();
+
+        // Rotate by angle
+        rotate(angle);
+
+        // Draw the branch
+        line(0, 0, 0, -h);
+
+        // Move to the end of the branch
+        translate(0, -h);
+
+        // Call branch() recursively
+        branch(h, level + 1);
+
+        // Restore the saved coordinate system
+        pop();
+
+        // Draw the left branch
+        push();
+        rotate(-angle);
+        line(0, 0, 0, -h);
+        translate(0, -h);
+        branch(h, level + 1);
+        pop();
+      }
     }
 
     function windowResized() {
