@@ -27,7 +27,7 @@
             <p style="color:white;">Zahiir</p>
             <!-- #ff9800; orange #4169e1; blue -->
             <p style="color:white;">CSY2 @ UoM</p>
-            <p style="color:green;"><b>Scroll down</b></p>
+            <p style="color:#7CFC00;"><b>Scroll down</b></p>
           </div>
         </div>
       </header>
@@ -69,117 +69,28 @@
   </div>
 
   <script>
-    let angle;
+ let x = 0;
+let y = 0;
 
-    function setup() {
-      createCanvas(windowWidth, windowHeight);
-      colorMode(HSB);
-      angleMode(DEGREES);
-    }
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noStroke();
+  textOutput();
+}
 
-    function draw() {
-      clear();
-      background(0, 0, 0, 0); // Transparent background
 
-      // Eye-following cursor animation
-      drawEyes();
+function draw() {
+  background(0);
 
-      // Tree animation
-      drawTree();
-    }
+  // Adjust the position based on the window size
+  x = lerp(x, mouseX, 0.05);
+  y = lerp(y, mouseY, 0.05);
 
-    function drawEyes() {
-      // Draw left eye
-      let leftX = width / 2 - 50;
-      let leftY = height / 2;
+  fill(255);
+  stroke(255);
+  ellipse(x, y, 66, 66);
+}
 
-      let leftAngle = atan2(mouseY - leftY, mouseX - leftX);
-
-      push();
-      translate(leftX, leftY);
-      fill(255);
-      ellipse(0, 0, 50, 50);
-      rotate(leftAngle);
-      fill(0);
-      ellipse(12.5, 0, 25, 25);
-      pop();
-
-      // Draw right eye
-      let rightX = width / 2 + 50;
-      let rightY = height / 2;
-
-      let rightAngle = atan2(mouseY - rightY, mouseX - rightX);
-
-      push();
-      translate(rightX, rightY);
-      fill(255);
-      ellipse(0, 0, 50, 50);
-      rotate(rightAngle);
-      fill(0);
-      ellipse(12.5, 0, 25, 25);
-      pop();
-    }
-
-    function drawTree() {
-      // Calculate the angle based on the mouse position, maximum 90 degrees
-      angle = (mouseX / width) * 90;
-      angle = min(angle, 90);
-
-      // Start the tree from the bottom of the screen
-      translate(width / 2, height);
-
-      // Draw a line 120 pixels
-      stroke(0, 255, 255);
-      line(0, 0, 0, -120);
-
-      // Move to the end of that line
-      translate(0, -120);
-
-      // Start the recursive branching
-      branch(120, 0);
-    }
-
-    function branch(h, level) {
-      // Set the hue based on the recursion level
-      stroke(level * 25, 255, 255);
-
-      // Each branch will be 2/3 the size of the previous one
-      h *= 0.66;
-
-      // Draw if our branch length > 2, otherwise stop the recursion
-      if (h > 2) {
-        // Draw the right branch
-        // Save the current coordinate system
-        push();
-
-        // Rotate by angle
-        rotate(angle);
-
-        // Draw the branch
-        line(0, 0, 0, -h);
-
-        // Move to the end of the branch
-        translate(0, -h);
-
-        // Call branch() recursively
-        branch(h, level + 1);
-
-        // Restore the saved coordinate system
-        pop();
-
-        // Draw the left branch
-        push();
-        rotate(-angle);
-        line(0, 0, 0, -h);
-        translate(0, -h);
-        branch(h, level + 1);
-        pop();
-      }
-    }
-
-    function windowResized() {
-      resizeCanvas(windowWidth, windowHeight);
-    }
   </script>
   <script src="script.js" type="text/javascript"></script>
 </body>
