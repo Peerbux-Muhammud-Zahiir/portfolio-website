@@ -1,2 +1,5 @@
-*.log
-pictures/*
+# Ignore the pictures folder
+pictures/
+
+# Ignore the favicon folder
+favicon/
