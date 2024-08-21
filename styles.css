@@ -74,8 +74,12 @@ h2 {
   transform: scale(1.03);
 }
 
+.project p{
+  text-align: left;
+}
+
 a {
-  color: orange;
+  color: rgb(255, 166, 0);
   /* Dark blue */
   text-decoration: none;
   transition: color 0.3s;
@@ -83,9 +87,13 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: rgb(103, 103, 103);
+  color: rgb(186, 121, 0);
   transition: 0.3s;
 }
+
+
+
+
 
 .button-85 {
   font-size:1.3em;
