@@ -1,7 +1,36 @@
 */* Reset default margin and padding */
 
 
+.pcb-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+.pcb-text p {
+  font-size: 60px;
+  animation: typing 3s steps(56), blink-caret 0.85s step-end infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  border-right: .12em solid orange;
+}
+
+
+
+@keyframes typing {
+  from { 
+  width: 0; 
+  }
+  to { 
+  width: 100%; 
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 
 .image-round{
   border-radius: 50%;
