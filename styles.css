@@ -386,8 +386,11 @@ canvas {
   background-color: #272727;
   padding: 15px;
   border-radius: 10px;
-  transition: transform 0.3s, background-color 0.3s; 
+  transition: transform 0.3s, background-color 0.3s;
+  word-wrap: break-word; /* Ensure text wraps to next line */
+  overflow-wrap: break-word; /* Alternate property for compatibility */
 }
+
 
  .project:hover {
   transform: scale(1.05);
