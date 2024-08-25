@@ -1,36 +1,7 @@
-*/* Reset default margin and padding */
-
-
-.pcb-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.pcb-text p {
-  font-size: 60px;
-  animation: typing 3s steps(56), blink-caret 0.85s step-end infinite;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 auto;
-  border-right: .12em solid orange;
-}
+/* Reset default margin and padding */
 
 
 
-@keyframes typing {
-  from { 
-  width: 0; 
-  }
-  to { 
-  width: 100%; 
-  }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
 
 .image-round{
   border-radius: 50%;
@@ -42,7 +13,12 @@
   box-sizing: border-box;
 }
 
-
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  /* color: #333; */
+  line-height: 1.6;
+}
 
 .container {
   max-width: 800px;
@@ -60,6 +36,7 @@ h1 {
   color: orange;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 h2 {
@@ -68,8 +45,8 @@ h2 {
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
-
 
 h3 {
   font-size:1.25em;
@@ -77,6 +54,7 @@ h3 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   text-decoration:none;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 p {
@@ -84,6 +62,7 @@ p {
   font-family:Arial,sans-serif;
   color:beige;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 section {
@@ -91,13 +70,14 @@ section {
 }
 
 
+
 .project {
   margin-bottom: 15px;
-  /* transition: transform 0.3s; */
+  transition: transform 0.3s;
 }
 
 .project:hover {
-  /* transform: scale(1.03); */
+  transform: scale(1.03); 
 }
 
 .project p{
@@ -119,10 +99,13 @@ a:hover {
 
 
 
-
+.about p{
+  font-size: 1.1em;
+}
 
 .button-85 {
-  font-size:1.1em;
+  font-size:1.2em;
+  font-family: 'Courier New', Courier, monospace;
   display:flex;
   margin:.5em;
   padding: 0.6em 2em;
@@ -246,83 +229,137 @@ footer {
   text-align: center;
 }
 
-.css-typing {
+.css-typing p {
   border-right: .15em solid grey;
-  font-family: Arial, sans-serif;
-  font-size: 2em;
+  font-family: "Courier";
+  font-size: 1.5em;
   white-space: nowrap;
   overflow: hidden;
   margin: 0 auto;
 }
 
-.css-typing p {
-  display: inline-block;
-  margin: 0;
-}
-
 .css-typing p:nth-child(1) {
-  width: 0;
-  -webkit-animation: type1 2s steps(15, end) forwards, blink .75s step-end infinite;
-  animation: type1 2s steps(15, end) forwards, blink .75s step-end infinite;
+  width: 7.3em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .css-typing p:nth-child(2) {
-  width: 0;
+  width: 11.5em;
   opacity: 0;
-  -webkit-animation: type2 3s steps(18, end) forwards, blink .75s step-end infinite;
-  animation: type2 3s steps(18, end) forwards, blink .75s step-end infinite;
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .css-typing p:nth-child(3) {
-  width: 0;
+  width: 7.3em;
   opacity: 0;
-  -webkit-animation: type3 4s steps(22, end) forwards, blink .75s step-end infinite;
-  animation: type3 4s steps(22, end) forwards, blink .75s step-end infinite;
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
+  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-@keyframes type1 {
-  from { width: 0; }
-  to { width: 11em; }
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
 }
 
-@-webkit-keyframes type1 {
-  from { width: 0; }
-  to { width: 11em; }
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
 }
 
 @keyframes type2 {
-  from { width: 0; }
-  to { width: 10em; opacity: 1; }
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
 }
 
 @-webkit-keyframes type2 {
-  from { width: 0; }
-  to { width: 10em; opacity: 1; }
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
 }
 
 @keyframes type3 {
-  from { width: 0; }
-  to { width: 12em; opacity: 1; }
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes type3 {
-  from { width: 0; }
-  to { width: 12em; opacity: 1; }
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
-  from { border-color: transparent; }
-  to { border-color: grey; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 @-webkit-keyframes blink {
-  from { border-color: transparent; }
-  to { border-color: grey; }
+  50% {
+    border-color: transparent;
+  }
 }
+
 
 
 
@@ -349,14 +386,14 @@ canvas {
   background-color: #272727;
   padding: 15px;
   border-radius: 10px;
-  transition: transform 0.3s, background-color 0.3s; 
+  /* transition: transform 0.3s, background-color 0.3s; */
 }
 
- .project:hover {
+/* .project:hover {
   transform: scale(1.05);
   background-color: #353535;
   transition:0.3s;
-} 
+} */
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
@@ -364,7 +401,6 @@ body {
   color: beige;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
 
 
