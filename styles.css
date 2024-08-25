@@ -219,15 +219,15 @@ footer {
 
 .css-typing p {
   border-right: .15em solid grey;
-  font-family: "Courier";
-  font-size: 1.5em;
+  font-family:Arial,sans-serif;
+  font-size: 2em;
   white-space: nowrap;
   overflow: hidden;
   margin: 0 auto;
 }
 
 .css-typing p:nth-child(1) {
-  width: 7.3em;
+  width: 20em;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
@@ -235,7 +235,7 @@ footer {
 }
 
 .css-typing p:nth-child(2) {
-  width: 11.5em;
+  width: 20em;
   opacity: 0;
   -webkit-animation: type2 2s steps(40, end);
   animation: type2 2s steps(40, end);
@@ -246,12 +246,12 @@ footer {
 }
 
 .css-typing p:nth-child(3) {
-  width: 7.3em;
+  width: 20em;
   opacity: 0;
-  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
   animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -374,14 +374,14 @@ canvas {
   background-color: #272727;
   padding: 15px;
   border-radius: 10px;
-  /* transition: transform 0.3s, background-color 0.3s; */
+  transition: transform 0.3s, background-color 0.3s; 
 }
 
-/* .project:hover {
+ .project:hover {
   transform: scale(1.05);
   background-color: #353535;
   transition:0.3s;
-} */
+} 
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
@@ -412,7 +412,7 @@ body {
 
 .text-box p {
   margin: 0;
-  font-family:"Courier", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: beige;
