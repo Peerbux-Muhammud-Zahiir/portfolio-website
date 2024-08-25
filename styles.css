@@ -376,20 +376,8 @@ canvas {
 
 
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
 
-.project {
-  background-color: #272727;
-  padding: 15px;
-  border-radius: 10px;
-  transition: transform 0.3s, background-color 0.3s;
-  word-wrap: break-word; /* Ensure text wraps to next line */
-  overflow-wrap: break-word; /* Alternate property for compatibility */
-}
+
 
 
  .project:hover {
@@ -397,6 +385,37 @@ canvas {
   background-color: #353535;
   transition:0.3s;
 } 
+
+
+.project {
+  background-color: #272727;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s;
+  word-wrap: break-word; /* Ensure text wraps to next line */
+  overflow-wrap: break-word; /* For wider browser support */
+  max-width: 100%; /* Ensure it doesn't exceed the container's width */
+  box-sizing: border-box; /* Include padding and borders in element's width/height */
+}
+
+.project a {
+  max-width: 100%; /* Ensure links don't overflow */
+  word-wrap: break-word; /* Wrap long links */
+  overflow-wrap: break-word; /* For wider browser support */
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 100%; /* Make sure the grid doesn't exceed its container */
+  box-sizing: border-box; /* Include padding/borders in width */
+}
+
+
+
+
+
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
