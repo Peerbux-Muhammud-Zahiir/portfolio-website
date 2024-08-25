@@ -13,12 +13,7 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: black;
-  /* color: #333; */
-  line-height: 1.6;
-}
+
 
 .container {
   max-width: 800px;
@@ -39,7 +34,7 @@ h1 {
 }
 
 h3 {
-  font-size:1.2em;
+  font-size:1.3em;
   color: beige;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   text-decoration:none;
@@ -392,6 +387,7 @@ body {
   color: beige;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 
@@ -414,7 +410,7 @@ body {
 
 .text-box p {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family:"Courier", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: beige;
