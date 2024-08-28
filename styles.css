@@ -227,15 +227,15 @@ footer {
 
 .css-typing p {
   border-right: .15em solid grey;
-  font-family:Courier,Arial, Helvetica, sans-serif;
-  font-size: 2.5em;
+  font-family:"Lucida Console", "Courier New", monospace;
+  font-size: 2em;
   white-space: nowrap;
   overflow: hidden;
   margin: 0 auto;
 }
 
 .css-typing p:nth-child(1) {
-  width: 7.3em;
+  width: 6em;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
@@ -243,7 +243,7 @@ footer {
 }
 
 .css-typing p:nth-child(2) {
-  width: 11.5em;
+  width: 4em;
   opacity: 0;
   -webkit-animation: type2 2s steps(40, end);
   animation: type2 2s steps(40, end);
