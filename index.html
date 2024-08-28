@@ -19,38 +19,25 @@
         <div class="css-typing">
           <p style="color:#8a307f">Zahiir</p>
           <p style="color:#8a307f">CSY2</p>
-          <p style="color:#8a307f;"><b>Scroll down</b></p>
+          <p style="color:#79a7d3;"><b>Scroll down</b></p>
         </div>
       </div>
     </header>
     
     <section id="about">
       <h2>About Me</h2>
-    
-</section>
 
-
-      </section>
-      </section>
-      <!--
-       <div align="center">
-      <img class="image-round" alt="Coding" border-radius="100px" width="200" src="./pictures/Fire.gif"/>
-      </div>
-    -->
       <div class="about">
-        <h1>Hello! 👋 I'm Zahiir.</h1>
+          <h1>Hello! 👋 I'm Zahiir.</h1>
           <br>
-        <div align="center">
-           <img src="pictures/zp.jpg" style="border-radius:50%;" width=50%>
+          <div align="center">
+            <img src="pictures/zp.jpg" style="border-radius:50%;" width=30%>
+          </div>
+          <br>
+          <p>
+            CS student 💻 at UoM 🎓. Into pen testing 🔓, web dev 🌐, AI 🤖. Active on LinkedIn 🧑‍💼 or WhatsApp 📱!
+          </p>
         </div>
-        <br>
-          <p>CS student 💻 at UoM 🎓. Into pen testing 🔓, web dev 🌐, AI 🤖. Active on LinkedIn 🧑‍💼 or WhatsApp 📱!</p>
-      </div>
-
-
-
-  
-
     </section>
 <br>
     <section id="projects">
@@ -61,22 +48,30 @@
           <h3>Azure Cloud Challenge 2024</h3>
           <br>
           <div align="center">
-          <img src="pictures/cc.jpg" width=90% style="border-radius:5px;">
+            <img src="pictures/cc.jpg" width=90% style="border-radius:5px;">
           </div>
-          <br>
-          <p>Bagged 1st prize for the first time. Successfully created and deployed virtual networks, virtual machines, SQL server and SQL database, website using GitHub and integrated statistics using Azure Power BI.</p>
-        </div>
+            <br>
+            <p>
+              Bagged 1st prize for the first time. Successfully created and deployed virtual networks, virtual machines, SQL server and SQL database, website using GitHub and integrated statistics using Azure Power BI.
+            </p>
+          </div>
         <div class="project">
           <h3>Bio-Tech Hackathon</h3>
           <br>
           <div align="center">
-          <img src="pictures/Bth.jpg" width=90% style="border-radius:5px;">
+            <img src="pictures/Bth.jpg" width=90% style="border-radius:5px;">
           </div>
           <br>
-          <p>I led my team, the Open Source Avengers, to create NutriCare, an AI-driven mobile app using flutter, dart, firebase, Tensorflowlite, nutritionix API, Gemini API to recommend diet plans for all demographics in Mauritius. We also trained a model on <a href="https://teachablemachine.withgoogle.com/" alt="Teachable machine" target="_blank">Teachable machine</a> using <a href="https://www.kaggle.com/" alt="kaggle" target="_blank">Kaggle</a> food dataset.</p>
+          <p>
+            I led my team, the Open Source Avengers, to create NutriCare, an AI-driven mobile app using flutter, dart, firebase, Tensorflowlite, nutritionix API, Gemini API to recommend diet plans for all demographics in Mauritius. We also trained a model on <a href="https://teachablemachine.withgoogle.com/" alt="Teachable machine" target="_blank">Teachable machine</a> using <a href="https://www.kaggle.com/" alt="kaggle" target="_blank">Kaggle</a> food dataset.
+          </p>
           <br>
-          <p>For more details, visit our <a href="https://github.com/Peerbux-Muhammud-Zahiir/NutriCare_app" target="_blank">GitHub project page.</a></p>
-          <p>To see images from our hackathon experience <a href="https://drive.google.com/drive/folders/1-XbjBCAY97GROMaVo4vlgykqoA9EF5ru" target="_blank">click here.</a></p>
+          <p>
+            For more details, visit our <a href="https://github.com/Peerbux-Muhammud-Zahiir/NutriCare_app" target="_blank">GitHub project page.</a>
+          </p>
+          <p>
+            To see images from our hackathon experience <a href="https://drive.google.com/drive/folders/1-XbjBCAY97GROMaVo4vlgykqoA9EF5ru" target="_blank">click here.</a>
+          </p>
         </div>
         <div class="project">
           <h3>Game of Code CTF</h3>
@@ -97,11 +92,11 @@
 
 
 
-    <div class="button-container">
+
     
 
 <section id="contact">
-    
+  <div class="button-container">
     <div align="center">
         <h2>Blog</h2>
         <a href="https://www.blogger.com/profile/07510968635379733077" target="_blank"><button class="button-85" role="button">Blogger</button></a>
@@ -130,7 +125,7 @@
     </div>
 </section>
 
-  <br>
+
       <div align="center">
            <footer>
                <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
@@ -151,7 +146,7 @@
     }
 
     function draw() {
-      background(0, 0, 0, 20); // Slightly transparent background for trailing effect
+      background(0, 0, 0, 100); // Slightly transparent background for trailing effect
 
       // Calculate target position with some randomness
       targetX = mouseX + random(-10, 10);
@@ -160,8 +155,8 @@
       // Smoothly move towards the target
       x = lerp(x, targetX, speed);
       y = lerp(y, targetY, speed);
-
-      fill(0);
+//rgb
+      fill(200,200,200);
       stroke(255);
       ellipse(x, y, 66, 66);
     }
@@ -172,3 +167,8 @@
   </script>
 </body>
 </html>
+    <!--
+       <div align="center">
+      <img class="image-round" alt="Coding" border-radius="100px" width="200" src="./pictures/Fire.gif"/>
+      </div>
+    -->
