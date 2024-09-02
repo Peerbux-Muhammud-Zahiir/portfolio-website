@@ -116,7 +116,7 @@ a:hover {
   padding: 0.6em 2em;
   border: none;
   outline: none;
-  color: #8a307f;
+  color:#6883bc;
   background: #000;
   cursor: pointer;
   position: relative;
@@ -129,8 +129,8 @@ a:hover {
 
 
 .button-85:hover{
+  color: #8a307f;
 
-  color:#6883bc;
   transform:scale(1.02);
   transition:0.3s;
   cursor:pointer;
@@ -239,14 +239,14 @@ footer {
 .css-typing p {
   border-right: .15em solid grey;
   font-family:"Exo","Lucida Console", "Courier New", monospace;
-  font-size: 2em;
+  font-size: 1.5em;
   white-space: nowrap;
   overflow: hidden;
   margin: 0 auto;
 }
 
 .css-typing p:nth-child(1) {
-  width: 6em;
+  width: 3.5em;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
@@ -254,7 +254,7 @@ footer {
 }
 
 .css-typing p:nth-child(2) {
-  width: 4em;
+  width: 2.8em;
   opacity: 0;
   -webkit-animation: type2 2s steps(40, end);
   animation: type2 2s steps(40, end);
@@ -265,7 +265,7 @@ footer {
 }
 
 .css-typing p:nth-child(3) {
-  width: 7.3em;
+  width: 6em;
   opacity: 0;
   -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
   animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
