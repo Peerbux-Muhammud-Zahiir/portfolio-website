@@ -37,3 +37,10 @@ document.addEventListener("DOMContentLoaded", function() {
   type();
 });
 
+const flipContainer = document.querySelector('.flip-container');
+let isFlipped = false;
+
+flipContainer.addEventListener('click', () => {
+    isFlipped = !isFlipped;
+    flipContainer.querySelector('.flipper').style.transform = isFlipped ? 'rotateY(180deg)' : 'rotateY(0)';
+});
