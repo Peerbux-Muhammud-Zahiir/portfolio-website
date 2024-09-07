@@ -188,19 +188,19 @@
     }
 
     function draw() {
-      background(0, 0, 0, 100); // Slightly transparent background for trailing effect
+      background(0, 0, 0, 100); 
 
-      // Calculate target position with some randomness
+ 
       targetX = mouseX + random(-10, 10);
       targetY = mouseY + random(-10, 10);
 
-      // Smoothly move towards the target
+     
       x = lerp(x, targetX, speed);
       y = lerp(y, targetY, speed);
-//rgb
+
       fill(255);
-      stroke(255);
-      ellipse(x, y, 66, 66);
+      stroke(2500);
+      ellipse(x, y, 30, 30);
     }
 
     function windowResized() {
@@ -209,8 +209,4 @@
   </script>
 </body>
 </html>
-    <!--
-       <div align="center">
-      <img class="image-round" alt="Coding" border-radius="100px" width="200" src="./pictures/Fire.gif"/>
-      </div>
-    -->
+    
