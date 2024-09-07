@@ -187,15 +187,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  background: url('path/to/fallback-image.jpg') no-repeat center center;
-  background-size: cover;
-} */
+
 
 .content {
   position: relative;
@@ -206,30 +198,18 @@ a:hover {
   z-index: 2;
 }
 
-/* .video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Maintain aspect ratio and fit within container */
-  /* overflow: hidden;
-  z-index: -1;
-  background: black;} /* Fallback color */
 
 
 footer {
   text-align: center;
   padding: 10px;
-  /* background: rgba(0, 0, 0, 0.7); */
-  /* color: black; */
 }
 
 .typewriter-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
 }
 
 .css-typing {
@@ -376,8 +356,8 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1; /* Place the canvas behind other elements */
-  pointer-events: none; /* Ensure the canvas does not capture mouse events */
+  z-index: -1; 
+  pointer-events: none;
 }
 
 
@@ -385,12 +365,12 @@ canvas {
 
 
 .bw {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  -webkit-filter: grayscale(100%); 
   filter: grayscale(100%);
 }
 
 .bw:hover{
-  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
   transition:1s;
 }
@@ -408,37 +388,24 @@ canvas {
   padding: 15px;
   border-radius: 10px;
   transition: transform 0.3s, background-color 0.3s;
-  word-wrap: break-word; /* Ensure text wraps to next line */
-  overflow-wrap: break-word; /* For wider browser support */
-  max-width: 100%; /* Ensure it doesn't exceed the container's width */
-  box-sizing: border-box; /* Include padding and borders in element's width/height */
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  max-width: 100%; 
+  box-sizing: border-box; 
 }
 
 .project a {
-  max-width: 100%; /* Ensure links don't overflow */
-  word-wrap: break-word; /* Wrap long links */
-  overflow-wrap: break-word; /* For wider browser support */
+  max-width: 100%; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  max-width: 100%; /* Make sure the grid doesn't exceed its container */
-  box-sizing: border-box; /* Include padding/borders in width */
-}
-
-
-
-
-
-/* General Styles */
-body {
-  font-family:"Exo", Arial, Helvetica, sans-serif;
-  background-color: black;
-  color: beige;
-  margin: 0;
-  padding: 0;
+  max-width: 100%; 
+  box-sizing: border-box;
 }
 
 
@@ -447,26 +414,6 @@ body {
 
 
 
-
-
-
-.text-box {
-  /* border: 2px solid orange; Dark blue border */
-  padding: 20px;             /* Space inside the box */
-  margin: 20px 0;            /* Space outside the box */
-  background-color: #272727; /* Light grey background */
-  border-radius: 10px;       /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.text-box p {
-  margin: 0;
-  font-family:"Exo", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: beige;
-  text-align: left;
-}
 
 
 
@@ -476,8 +423,8 @@ body {
 
 
 .flip-container {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   perspective: 1000px;
 
 }
